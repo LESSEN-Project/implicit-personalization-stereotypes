@@ -1,4 +1,4 @@
-# GitHub Action: Mirror Repository to LESSEN Organization
+ # GitHub Action: Mirror Repository to LESSEN Organization
  # This action automatically pushes updates from this repository to the LESSEN-Project GitHub organization
  # repository whenever changes are pushed.
 
