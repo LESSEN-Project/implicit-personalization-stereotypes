@@ -1,5 +1,5 @@
 # Reading Between the Prompts: How Stereotypes Shape LLM's Implicit Personalization
-
+Authors: Vera Neplenbroek, Arianna Bisazza, Raquel Fernández.
 ![Introduction](figure.png)
 
 ## Paper abstract
