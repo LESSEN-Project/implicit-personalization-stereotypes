@@ -156,7 +156,9 @@ def get_chat_repr(
     ]
 
 
-def train_probe(repr, n_layers, results_file, save=False, save_file=""):
+def train_probe(
+    repr, n_layers, results_file, random, save=False, save_file=""
+):
     """Trains linear probe on representations from user introductions"""
     results = {}
     for demographic in tqdm(repr):
@@ -183,6 +185,16 @@ def train_probe(repr, n_layers, results_file, save=False, save_file=""):
                 ) as outfile:
                     pickle.dump(clf, outfile)
             else:
+                if random:
+                    n_classes = len(np.unique(y))
+                    y = []
+                    for value in repr[demographic]:
+                        if len(repr[demographic][value]) == 42:
+                            y += [np.random.randint(0, n_classes)] * 42
+                        else:
+                            rounds = len(repr[demographic][value]) // 40
+                            for _ in range(rounds):
+                                y += [np.random.randint(0, n_classes)] * 40
                 scores = cross_val_score(clf, X, y, cv=5)
                 results[demographic].append(scores)
     if not save:
@@ -222,6 +234,9 @@ if __name__ == "__main__":
     parser.add_argument(
         "--save_probe", action="store_true", help="Save trained probe"
     )
+    parser.add_argument(
+        "--random", action="store_true", help="Train probe on random labels"
+    )
     args = parser.parse_args()
     device = "cuda" if torch.cuda.is_available() else "cpu"
     tokenizer = AutoTokenizer.from_pretrained(args.model)
@@ -251,7 +266,8 @@ if __name__ == "__main__":
     train_probe(
         repr,
         n_layers,
-        f"{args.rd}/{args.model.split('/')[1]}_probe_results.pkl",
+        f"{args.rd}/{args.model.split('/')[1]}{'_rand' if args.random else ''}_probe_results.pkl",
+        random=args.random,
         save=args.save_probe,
         save_file=f"{args.rd}/{args.model.split('/')[1]}_probe",
     )
