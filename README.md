@@ -1,5 +1,8 @@
 # Reading Between the Prompts: How Stereotypes Shape LLM's Implicit Personalization
+This is the repository for [Reading Between the Prompts: How Stereotypes Shape LLM's Implicit Personalization](https://arxiv.org/abs/2505.16467).
+
 Authors: Vera Neplenbroek, Arianna Bisazza, Raquel Fernández.
+
 ![Introduction](figure.png)
 
 ## Paper abstract
@@ -38,3 +41,17 @@ This repository contains snippets of code from:
 - `stereotypes.csv` contains all stereotypical items we collected, as well as the set of neutral items.
 - `conversations_250.json` contains all conversations we use in the paper, 250 per type.
 - `visualizations.ipynb` contains the code for generating the visualizations, tables and statistical tests included in the paper.
+
+## Citation
+If you use the code in this repository, please cite the following paper:
+```
+@misc{neplenbroek2025readingpromptsstereotypesshape,
+      title={Reading Between the Prompts: How Stereotypes Shape LLM's Implicit Personalization}, 
+      author={Vera Neplenbroek and Arianna Bisazza and Raquel Fernández},
+      year={2025},
+      eprint={2505.16467},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2505.16467}, 
+}
+```
