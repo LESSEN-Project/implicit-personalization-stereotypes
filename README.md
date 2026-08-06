@@ -45,13 +45,24 @@ This repository contains snippets of code from:
 ## Citation
 If you use the code in this repository, please cite the following paper:
 ```
-@misc{neplenbroek2025readingpromptsstereotypesshape,
-      title={Reading Between the Prompts: How Stereotypes Shape LLM's Implicit Personalization}, 
-      author={Vera Neplenbroek and Arianna Bisazza and Raquel Fernández},
-      year={2025},
-      eprint={2505.16467},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL},
-      url={https://arxiv.org/abs/2505.16467}, 
+@inproceedings{neplenbroek-etal-2025-reading,
+    title = "Reading Between the Prompts: How Stereotypes Shape {LLM}{'}s Implicit Personalization",
+    author = "Neplenbroek, Vera  and
+      Bisazza, Arianna  and
+      Fern{\'a}ndez, Raquel",
+    editor = "Christodoulopoulos, Christos  and
+      Chakraborty, Tanmoy  and
+      Rose, Carolyn  and
+      Peng, Violet",
+    booktitle = "Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing",
+    month = nov,
+    year = "2025",
+    address = "Suzhou, China",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2025.emnlp-main.1029/",
+    doi = "10.18653/v1/2025.emnlp-main.1029",
+    pages = "20367--20400",
+    ISBN = "979-8-89176-332-6",
+    abstract = "Generative Large Language Models (LLMs) infer user{'}s demographic information from subtle cues in the conversation {---} a phenomenon called implicit personalization. Prior work has shown that such inferences can lead to lower quality responses for users assumed to be from minority groups, even when no demographic information is explicitly provided. In this work, we systematically explore how LLMs respond to stereotypical cues using controlled synthetic conversations, by analyzing the models' latent user representations through both model internals and generated answers to targeted user questions. Our findings reveal that LLMs do infer demographic attributes based on these stereotypical signals, which for a number of groups even persists when the user explicitly identifies with a different demographic group. Finally, we show that this form of stereotype-driven implicit personalization can be effectively mitigated by intervening on the model{'}s internal representations using a trained linear probe to steer them toward the explicitly stated identity. Our results highlight the need for greater transparency and control in how LLMs represent user identity."
 }
 ```
