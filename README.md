@@ -24,7 +24,7 @@ This repository contains snippets of code from:
 - https://github.com/yc015/TalkTuner-chatbot-llm-dashboard
 
 ## Using this repository
-- `eval_convos` contains the code to evaluate a model on all conversations for a demographic, including mitigation using probe weights wherever applicable.
+- `eval_conversations` contains the code to evaluate a model on all conversations for a demographic, including mitigation using probe weights wherever applicable.
 
   Example usage:
   ```
