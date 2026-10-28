@@ -1,5 +1,5 @@
 # Reading Between the Prompts: How Stereotypes Shape LLM's Implicit Personalization
-This is the repository for [Reading Between the Prompts: How Stereotypes Shape LLM's Implicit Personalization](https://arxiv.org/abs/2505.16467).
+This is the repository for [Reading Between the Prompts: How Stereotypes Shape LLM's Implicit Personalization](https://aclanthology.org/2025.emnlp-main.1029/).
 
 Authors: Vera Neplenbroek, Arianna Bisazza, Raquel Fernández.
 
